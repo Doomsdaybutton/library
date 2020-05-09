@@ -1,0 +1,110 @@
+.container {
+    width: 90%;
+    
+}
+
+.navbar-brand {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.custom-overflow {
+    overflow: hidden;
+    width:auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+
+.color-black {
+    color: black;
+}
+
+.plus-sign {
+    background-image: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1NTEuMTMgNTUxLjEzIiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNTUxLjEzIDU1MS4xMyIgd2lkdGg9IjUxMnB4Ij48cGF0aCBkPSJtMjc1LjU2NSAwYy0xNTEuOTQ0IDAtMjc1LjU2NSAxMjMuNjIxLTI3NS41NjUgMjc1LjU2NXMxMjMuNjIxIDI3NS41NjUgMjc1LjU2NSAyNzUuNTY1IDI3NS41NjUtMTIzLjYyMSAyNzUuNTY1LTI3NS41NjUtMTIzLjYyMS0yNzUuNTY1LTI3NS41NjUtMjc1LjU2NXptMCA1MTYuNjg1Yy0xMzIuOTU1IDAtMjQxLjExOS0xMDguMTY0LTI0MS4xMTktMjQxLjExOXMxMDguMTY0LTI0MS4xMiAyNDEuMTE5LTI0MS4xMiAyNDEuMTIgMTA4LjE2NCAyNDEuMTIgMjQxLjExOS0xMDguMTY1IDI0MS4xMi0yNDEuMTIgMjQxLjEyeiIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Im0yOTIuNzg4IDEzNy43ODNoLTM0LjQ0NnYxMjAuNTZoLTEyMC41NnYzNC40NDZoMTIwLjU2djEyMC41NmgzNC40NDZ2LTEyMC41NmgxMjAuNTZ2LTM0LjQ0NmgtMTIwLjU2eiIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPgo=');
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.media:hover {
+    text-decoration: none !important;
+}
+
+.go-back-arrow:hover {
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+.arrow-down-button:hover .arrow-down {
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+footer {
+    z-index: 10;
+}
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    /*text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);*/
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    /*text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);*/
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    /*text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    /*text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/  
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+
+
+
+
+
