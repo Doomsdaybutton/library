@@ -74,8 +74,6 @@
             $warning = "Du musst " . $critical . " Medien schon bald zurückgeben!";
         }
     }
-
-    echo $_GET['key'];
 ?>
 
     <?php include('inc/header.php'); ?>

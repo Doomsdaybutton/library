@@ -1,6 +1,7 @@
 <?php
-    // Create Connection
-    $conn = mysqli_connect('localhost', 'root', 'fPPxq_c$3NdF_3b', 'media');
+	// Create Connection
+	//SQL_password: see config/config.php
+    $conn = mysqli_connect('localhost', 'root', SQL_PASSWORD, 'media');
 
     if(mysqli_connect_errno()){
         //connection failed
