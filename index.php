@@ -75,6 +75,7 @@
         }
     }
 
+    echo $_GET['key'];
 ?>
 
     <?php include('inc/header.php'); ?>

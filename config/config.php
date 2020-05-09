@@ -1,6 +1,6 @@
 <?php
     define('ROOT_URL', 'http://localhost/library/');
-    define('API_KEY', 'AIzaSyBl3wrOkuGh9W7Z7ysuzlZg94PblxLRRdU');
+    //define('API_KEY', 'AIzaSyBl3wrOkuGh9W7Z7ysuzlZg94PblxLRRdU');
     define('ABSOLUTE_PATH', 'C:/xampp/htdocs/library/');
     session_start();
 
