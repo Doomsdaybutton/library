@@ -1,12 +1,13 @@
 <?php
     define('ROOT_URL', 'http://localhost/library/');
+    define('ABSOLUTE_PATH', 'C:/xampp/htdocs/library/');
     if(!defined('API_KEY')){
-      define('API_KEY', file_get_contents('config/google_books_api_key.txt'));
+      $api_key = file_get_contents(ABSOLUTE_PATH . 'config/google_books_api_key.txt');
+      define('API_KEY', $api_key);
     }
     if(!defined('SQL_PASSWORD')){
-      define('SQL_PASSWORD', file_get_contents('config/sql_password.txt'));
+      define('SQL_PASSWORD', file_get_contents(ABSOLUTE_PATH . 'config/sql_password.txt'));
     }
-    define('ABSOLUTE_PATH', 'C:/xampp/htdocs/library/');
     session_start();
 
     //Include Google Client Library for PHP autoload file

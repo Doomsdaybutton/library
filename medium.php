@@ -176,15 +176,15 @@
                             </fieldset>
                             <div class="clearfix"></div>
                             <hr class="mr-3">
-                            <p>Durschnitt: <span id="new_rating_number"><?php echo $medium['rating']; ?></span> <span style="color: #ea0; font-size: 20px;">★</span></p>
+                            <p>Durschnitt: <span id="new_rating_number"><?php echo number_format($medium['rating'], 2); ?></span> <span style="color: #ea0; font-size: 20px;">★</span></p>
                         </div>
                     </div>
                 <?php else: ?>
                     <div class="border border-warning rounded mt-3">
                         <div class="pt-3 pl-3">
-                            <h6 class="pr-3">Melde dich <a href="login.php">hier</a> an um das Buch zu bewerten!</h6>
+                            <h6 class="pr-3">Melde dich <a href="account/login.php">hier</a> an um das Buch zu bewerten!</h6>
                             <hr class="mr-3">
-                            <p>Durschnitt: <span id="new_rating_number"><?php echo $medium['rating']; ?></span> <span style="color: #ea0; font-size: 20px;">★</span></p>
+                            <p>Durschnitt: <span id="new_rating_number"><?php echo number_format((float)$medium['rating'], 2); ?></span> <span style="color: #ea0; font-size: 20px;">★</span></p>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -272,6 +272,10 @@
                         <?php endif; ?>
                     <?php else: ?>
                         <p class="btn btn-outline-danger float-right">Nicht verfügbar<br><span class="text-primary" style="font-size: 12px;">bis <?php echo toString($medium["lent_until"]); ?></span></p>
+                    <?php endif; ?>
+                    <?php if($_SESSION['current_user']['admin']): ?>
+                        <div class="clearfix"></div>
+                        <a class="float-right mr-n4 btn btn-link text-warning py-0" href="manage_medium.php?id=<?php echo $medium['id']; ?>">Manage Medium</a>
                     <?php endif; ?>
                 <?php else: ?>
                     <a href="account/login.php" class="btn btn-outline-info float-right">Anmelden<br><span style="font-size: 10px;">um den Status des Mediums zu sehen</span></a>

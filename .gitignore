@@ -5,3 +5,5 @@ log.txt
 php_url_request.zip
 SQL SORTING.txt
 /vendor
+config/google_books_api_key.txt
+config/sql_password.txt

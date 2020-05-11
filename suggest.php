@@ -86,8 +86,12 @@
         if($group_search){
             $query = "SELECT * FROM media WHERE (medium_group LIKE '%$request%') ORDER BY volume ASC";
         }
+        if(is_numeric($q) && isset($_SESSION['current_user']) && $_SESSION['current_user']['admin']){
+            $query = "SELECT * FROM media WHERE (id = $q)";
+        }
         $_SESSION['sql_query'] = $query;
         $sql_result = mysqli_query($conn, $query);
+        echo mysqli_error($conn);
         if($_SERVER['PHP_SELF'] == "suggest.php"){
             echo mysqli_error($conn);
         }

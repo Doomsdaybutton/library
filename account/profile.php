@@ -51,7 +51,7 @@
                 <?php endif; ?>
             </div>
             <div class="card-header text-center bg-white">
-                <h5><?php echo $_SESSION['current_user']['name'];?></h5>
+                <h5><?php echo $_SESSION['current_user']['firstname'] . ' ' . $_SESSION['current_user']['lastname'];?></h5>
             </div>
             <div class="class-body mt-3">
                 <table class="table table-sm justify-content-center d-flex">

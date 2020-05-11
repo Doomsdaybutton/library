@@ -484,7 +484,6 @@
     } elseif(!$noid) {
         //process google request
         $google_medium = json_decode(urlRequest('https://www.googleapis.com/books/v1/volumes/' . $id));
-        echo 'https://www.googleapis.com/books/v1/volumes/' . $id;
         //title
         if(isset($google_medium->volumeInfo->title)){
             $title = htmlentities($google_medium->volumeInfo->title);
@@ -634,8 +633,6 @@
         
         
     }
-    
-    var_dump($author_warning);
 ?>
 
     <?php include('inc/header.php'); ?>

@@ -691,7 +691,7 @@
                         <div class="input-group mt-3">
                             <div class="custom-file">
                                 <input class="custom-file-input" type="file" name="image" id="image">
-                                <label class="custom-file-label pl-n5 pr-5" style="overflow: hidden; white-space: nowrap;" for="image"><?php echo isset($_FILES['image']) ? $_FILES['image']['name'] : 'Bild auswählen...'; ?></label>
+                                <label class="custom-file-label pl-n5 pr-5" style="overflow: hidden; white-space: nowrap;" for="image"><?php echo isset($_FILES['image']) && $_FILES['image']['name'] != "" ? $_FILES['image']['name'] : 'Bild auswählen...'; ?></label>
                             </div>
                         </div>
                     </div>

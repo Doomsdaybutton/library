@@ -109,6 +109,7 @@
                 if(mysqli_query($conn, $query)){
                     new_log("Profile Edit: $param was changed to \"$value\"!", array("profile_before" => $_SESSION['current_user'], "changed_parameter" => $param, "to_value" => $value));
                     $_SESSION['current_user'][$param] = $value;
+                    header('Location: profile.php');
                 } else {
                     $msg = 'Die Änderungen konnten nicht gespeichert werden!';
                     $msg_class = 'danger';
@@ -135,6 +136,8 @@
                     if(!mysqli_query($conn, $query)){
                         $msg .= "Die Datei " . basename( $_FILES["profile_picture"]["name"]) . "konnte nicht in die Datenbank gespeichert werden." ;
                         $msg_class = 'danger';
+                    } else {
+                        header('Location: profile.php');
                     }
                 } else {
                     $msg = "Die Datei konnte nicht hochgeladen werden.";

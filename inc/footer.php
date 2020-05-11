@@ -1,5 +1,5 @@
     <div style="margin-bottom:100px;"></div>
-    <?php if(in_array($_SERVER['PHP_SELF'], ['/library/admin.php', '/library/imprint.php', '/library/add_medium.php', '/library/account/google_login_error.php'])): ?>
+    <?php if(in_array($_SERVER['PHP_SELF'], ['/library/admin.php', '/library/imprint.php', '/library/add_medium.php', '/library/account/google_login_error.php', '/library/learn.php', '/library/account/login.php'])): ?>
         <div style="margin-bottom:500px;"></div>
     <?php endif; ?>
     <footer class="footer py-3 bg-dark text-light" style="position: sticky; bottom:0; width: 100%;">
