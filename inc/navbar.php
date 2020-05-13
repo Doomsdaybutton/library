@@ -5,11 +5,11 @@
         $adminpage = FALSE;
     }
 
-    if(file_exists(ABSOLUTE_PATH . "images/media/temp.png") && $_SERVER['PHP_SELF'] != "/library/manage_medium.php" && $_SERVER['PHP_SELF'] != "/library/add_medium_medium.php"){
-        unlink(ABSOLUTE_PATH . "images/media/temp.png");
+    if(file_exists('ABSOLUTE_PATH' . "images/media/temp.png") && $_SERVER['PHP_SELF'] != "/library/manage_medium.php" && $_SERVER['PHP_SELF'] != "/library/add_medium_medium.php"){
+        unlink('ABSOLUTE_PATH' . "images/media/temp.png");
     }
 
-    if($_SERVER['PHP_SELF'] != "/library/manage_medium.php" && $_SERVER['PHP_SELF'] != "/library/add_medium_medium.php"){
+    if($_SERVER['PHP_SELF'] != "/library/manage_medium.php" && $_SERVER['PHP_SELF'] != "/library/add_medium_medium.php" && isset($_SESSION)){
         unset($_SESSION['image']);
         unset($_SESSION['lent_until']);
         unset($_SESSION['available']);
